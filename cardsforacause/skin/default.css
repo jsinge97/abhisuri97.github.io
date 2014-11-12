@@ -1,0 +1,156 @@
+/* ==============================================================
+
+
+-----------------------------------------------------------------
+CSS structure
+-----------------------------------------------------------------
+
+01. Color
+02. Background color
+03. Background image
+04. Border color
+05. Shadow color
+
+============================================================== */
+
+/*
+Color
+================================================== */
+
+a, a:hover, .color, .navbar-nav > li > a:hover, .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus, 
+.nav li a:hover, .nav li a.selected, .nav li a.active, #filter-bar ul#filters li a.selected, #filter-bar ul#filters li a:hover, .social-network:hover i{
+	color:#F79E21;
+}
+
+/*
+Background color
+================================================== */
+.default-bg, .icon-square:hover, .icon-circle:hover, .social-icon i, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .pricing-table li.featured ul li.plan_name, .pricing-table li.featured ul li.plan_price {
+	background-color:#1fb4da;
+}
+
+/*
+Background image
+================================================== */
+.home-contain{
+	  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+	height:150vh
+}
+
+#about{
+	
+	background-color:#FFF;
+	height:125vh
+			;max-height:1000px
+
+}
+
+
+#feature{
+	background-color:#FFF;
+	height:125vh
+		;max-height:1000px
+
+	 
+}
+#feature1{
+	background:#FFF;
+	height:125vh; max-height: 1400px
+
+
+	 
+}
+#feature2{
+	background:#FFF;
+	height:125vh
+		;max-height:1000px
+
+
+	 
+}
+#charity{
+	height:125vh;
+	background: url(http://www.appsforaptitude.org/cardsforacause/img/reading.jpg); background-size: cover
+		;max-height:1000px
+
+	 
+}
+
+
+#contact{
+	background: #000;
+		height:1200px;
+
+
+}
+
+#action{
+	background:#472546 url(img/pattern2.png) repeat 0 0;
+}
+
+#inner-head{
+	background:#472546 url(img/pattern2.png) repeat 0 0;
+}
+
+#inner-page{
+	background:url(img/pattern1.png) repeat top left, url(img/green-bg.png) repeat top left;
+}
+
+.error{
+	background:url(img/blue-bg.png) repeat 0 0;
+}
+	
+/*
+Border color
+================================================== */
+.icon-rounded:hover{
+	border-color:#1fb4da;
+}
+
+/*
+Shadow color
+================================================== */
+.stand-out-form{
+	position:relative;
+	margin-top:60px;
+	background:#fff;
+	-webkit-box-shadow: 15px 15px 0 #1c98b9;
+	   -moz-box-shadow: 15px 15px 0 #1c98b9;
+	        box-shadow: 15px 15px 0 #1c98b9;	
+}
+
+.video-wrapper{
+	-webkit-box-shadow: 15px 15px 0 #1c98b9;
+	   -moz-box-shadow: 15px 15px 0 #1c98b9;
+	        box-shadow: 15px 15px 0 #1c98b9;
+}
+
+.tab-feature{
+	-webkit-box-shadow: 15px 15px 0 #331b32;
+	   -moz-box-shadow: 15px 15px 0 #331b32;
+	        box-shadow: 15px 15px 0 #331b32;
+}
+
+.testimo-avatar{
+	-webkit-box-shadow: 5px 5px 0 #156353;
+	   -moz-box-shadow: 5px 5px 0 #156353;
+	        box-shadow: 5px 5px 0 #156353;	
+}
+
+ul.listForm .form-control{
+	-webkit-box-shadow: 8px 8px 0 #2699b8;
+	   -moz-box-shadow: 8px 8px 0 #2699b8;
+	        box-shadow: 8px 8px 0 #2699b8;		
+}
+
+.comment-wrapper{
+	-webkit-box-shadow: 10px 15px 0 #2f9983;
+	   -moz-box-shadow: 10px 15px 0 #2f9983;
+	        box-shadow: 10px 15px 0 #2f9983;
+}
+
+.error h2{
+	text-shadow: 15px 15px 0 #1c98b9;	
+}

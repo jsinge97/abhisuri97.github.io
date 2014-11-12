@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI sortable documentation</title>
+
+	<style>
+	body {
+		font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif"
+	}
+	.gutter {
+		display: none;
+	}
+	</style>
+</head>
+<body>
+
+<script>{
+		"title":
+			"Sortable Widget",
+		"excerpt":
+			"Reorder elements in a list or grid using the mouse.",
+		"termSlugs": {
+			"category": [
+				"interactions"
+			]
+		}
+	}</script><article id="sortable1" class="entry widget"><h2 class="section-title">
+<span>Sortable Widget</span><span class="version-details">version added: 1.0</span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>Description: </strong>Reorder elements in a list or grid using the mouse.</p>
+<section id="quick-nav"><header><h2>QuickNav<a href="#entry-examples">Examples</a>
+</h2></header><div class="quick-nav-section">
+<h3>Options</h3>
+<div><a href="#option-appendTo">appendTo</a></div>
+<div><a href="#option-axis">axis</a></div>
+<div><a href="#option-cancel">cancel</a></div>
+<div><a href="#option-connectWith">connectWith</a></div>
+<div><a href="#option-containment">containment</a></div>
+<div><a href="#option-cursor">cursor</a></div>
+<div><a href="#option-cursorAt">cursorAt</a></div>
+<div><a href="#option-delay">delay</a></div>
+<div><a href="#option-disabled">disabled</a></div>
+<div><a href="#option-distance">distance</a></div>
+<div><a href="#option-dropOnEmpty">dropOnEmpty</a></div>
+<div><a href="#option-forceHelperSize">forceHelperSize</a></div>
+<div><a href="#option-forcePlaceholderSize">forcePlaceholderSize</a></div>
+<div><a href="#option-grid">grid</a></div>
+<div><a href="#option-handle">handle</a></div>
+<div><a href="#option-helper">helper</a></div>
+<div><a href="#option-items">items</a></div>
+<div><a href="#option-opacity">opacity</a></div>
+<div><a href="#option-placeholder">placeholder</a></div>
+<div><a href="#option-revert">revert</a></div>
+<div><a href="#option-scroll">scroll</a></div>
+<div><a href="#option-scrollSensitivity">scrollSensitivity</a></div>
+<div><a href="#option-scrollSpeed">scrollSpeed</a></div>
+<div><a href="#option-tolerance">tolerance</a></div>
+<div><a href="#option-zIndex">zIndex</a></div>
+</div>
+<div class="quick-nav-section">
+<h3>Methods</h3>
+<div><a href="#method-cancel">cancel</a></div>
+<div><a href="#method-destroy">destroy</a></div>
+<div><a href="#method-disable">disable</a></div>
+<div><a href="#method-enable">enable</a></div>
+<div><a href="#method-option">option</a></div>
+<div><a href="#method-refresh">refresh</a></div>
+<div><a href="#method-refreshPositions">refreshPositions</a></div>
+<div><a href="#method-serialize">serialize</a></div>
+<div><a href="#method-toArray">toArray</a></div>
+<div><a href="#method-widget">widget</a></div>
+</div>
+<div class="quick-nav-section">
+<h3>Events</h3>
+<div><a href="#event-create">create</a></div>
+<div><a href="#event-start">start</a></div>
+<div><a href="#event-sort">sort</a></div>
+<div><a href="#event-change">change</a></div>
+<div><a href="#event-beforeStop">beforeStop</a></div>
+<div><a href="#event-stop">stop</a></div>
+<div><a href="#event-update">update</a></div>
+<div><a href="#event-receive">receive</a></div>
+<div><a href="#event-remove">remove</a></div>
+<div><a href="#event-over">over</a></div>
+<div><a href="#event-out">out</a></div>
+<div><a href="#event-activate">activate</a></div>
+<div><a href="#event-deactivate">deactivate</a></div>
+</div></section><div class="longdesc" id="entry-longdesc">
+		<p>The jQuery UI Sortable plugin makes selected elements sortable by dragging with the mouse.</p>
+		<p><em>Note: In order to sort table rows, the <code>tbody</code> must be made sortable, not the <code>table</code>.</em></p>
+	</div>
+<section id="options"><header><h2 class="underline">Options</h2></header><div id="option-appendTo" class="api-item first-item">
+<h3>appendTo<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#jQuery">jQuery</a> or <a href="http://api.jquery.com/Types#Element">Element</a> or <a href="http://api.jquery.com/Types#Selector">Selector</a> or <a href="http://api.jquery.com/Types#String">String</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>"parent"</code>
+</div>
+<div>Defines where the helper that moves with the mouse is being appended to during the drag (for example, to resolve overlap/zIndex issues).</div>
+<strong>Multiple types supported:</strong><ul>
+<li>
+<strong>jQuery</strong>: A jQuery object containing the element to append the helper to.</li>
+<li>
+<strong>Element</strong>: The element to append the helper to.</li>
+<li>
+<strong>Selector</strong>: A selector specifying which element to append the helper to.</li>
+<li>
+<strong>String</strong>: The string <code>"parent"</code> will cause the helper to be a sibling of the sortable item.</li>
+</ul>
+<strong>Code examples:</strong><p>Initialize the sortable with the appendTo option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ appendTo: document.body });</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the appendTo option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">appendTo = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"appendTo"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"appendTo"</code><code class="plain">, document.body );</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-axis" class="api-item">
+<h3>axis<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#String">String</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>If defined, the items can be dragged only horizontally or vertically. Possible values: <code>"x"</code>, <code>"y"</code>.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the axis option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ axis: </code><code class="string">"x"</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the axis option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">axis = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"axis"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"axis"</code><code class="plain">, </code><code class="string">"x"</code> <code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-cancel" class="api-item">
+<h3>cancel<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Selector">Selector</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>":input,button"</code>
+</div>
+<div>Prevents sorting if you start on elements matching the selector.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the cancel option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ cancel: </code><code class="string">"a,button"</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the cancel option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">cancel = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"cancel"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"cancel"</code><code class="plain">, </code><code class="string">"a,button"</code> <code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-connectWith" class="api-item">
+<h3>connectWith<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Selector">Selector</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>A selector of other sortable elements that the items from this list should be connected to. This is a one-way relationship, if you want the items to be connected in both directions, the <code>connectWith</code> option must be set on both sortable elements.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the connectWith option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ connectWith: </code><code class="string">"#shopping-cart"</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the connectWith option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">connectWith = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"connectWith"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"connectWith"</code><code class="plain">, </code><code class="string">"#shopping-cart"</code> <code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-containment" class="api-item">
+<h3>containment<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Element">Element</a> or <a href="http://api.jquery.com/Types#Selector">Selector</a> or <a href="http://api.jquery.com/Types#String">String</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>
+				<p>Defines a bounding box that the sortable items are contrained to while dragging.</p>
+
+				<p>Note: The element specified for containment must have a calculated width and height (though it need not be explicit). For example, if you have <code>float: left</code> sortable children and specify <code>containment: "parent"</code> be sure to have <code>float: left</code> on the sortable/parent container as well or it will have <code>height: 0</code>, causing undefined behavior.</p>
+			</div>
+<strong>Multiple types supported:</strong><ul>
+<li>
+<strong>Element</strong>: An element to use as the container.</li>
+<li>
+<strong>Selector</strong>: A selector specifying an element to use as the container.</li>
+<li>
+<strong>String</strong>: A string identifying an element to use as the container. Possible values: <code>"parent"</code>, <code>"document"</code>, <code>"window"</code>.</li>
+</ul>
+<strong>Code examples:</strong><p>Initialize the sortable with the containment option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ containment: </code><code class="string">"parent"</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the containment option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">containment = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"containment"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"containment"</code><code class="plain">, </code><code class="string">"parent"</code> <code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-cursor" class="api-item">
+<h3>cursor<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#String">String</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>"auto"</code>
+</div>
+<div>Defines the cursor that is being shown while sorting.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the cursor option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ cursor: </code><code class="string">"move"</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the cursor option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">cursor = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"cursor"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"cursor"</code><code class="plain">, </code><code class="string">"move"</code> <code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-cursorAt" class="api-item">
+<h3>cursorAt<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Object">Object</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>Moves the sorting element or helper so the cursor always appears to drag from the same position. Coordinates can be given as a hash using a combination of one or two keys: <code>{ top, left, right, bottom }</code>.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the cursorAt option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ cursorAt: { left: 5 } });</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the cursorAt option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">cursorAt = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"cursorAt"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"cursorAt"</code><code class="plain">, { left: 5 } );</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-delay" class="api-item">
+<h3>delay<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Integer">Integer</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>0</code>
+</div>
+<div>Time in milliseconds to define when the sorting should start. Adding a delay helps preventing unwanted drags when clicking on an element.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the delay option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ delay: 150 });</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the delay option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">delay = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"delay"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"delay"</code><code class="plain">, 150 );</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-disabled" class="api-item">
+<h3>disabled<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Boolean">Boolean</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>Disables the sortable if set to <code>true</code>.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the disabled option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ disabled: </code><code class="keyword">true</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the disabled option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">disabled = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"disabled"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"disabled"</code><code class="plain">, </code><code class="keyword">true</code> <code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-distance" class="api-item">
+<h3>distance<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Number">Number</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>1</code>
+</div>
+<div>Tolerance, in pixels, for when sorting should start. If specified, sorting will not start until after mouse is dragged beyond distance. Can be used to allow for clicks on elements within a handle.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the distance option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ distance: 5 });</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the distance option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">distance = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"distance"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"distance"</code><code class="plain">, 5 );</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-dropOnEmpty" class="api-item">
+<h3>dropOnEmpty<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Boolean">Boolean</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>true</code>
+</div>
+<div>If <code>false</code>, items from this sortable can't be dropped on an empty connect sortable (see the <a href="#option-connectWith"><code>connectWith</code></a> option.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the dropOnEmpty option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ dropOnEmpty: </code><code class="keyword">false</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the dropOnEmpty option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">dropOnEmpty = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"dropOnEmpty"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"dropOnEmpty"</code><code class="plain">, </code><code class="keyword">false</code> <code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-forceHelperSize" class="api-item">
+<h3>forceHelperSize<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Boolean">Boolean</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>If <code>true</code>, forces the helper to have a size.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the forceHelperSize option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ forceHelperSize: </code><code class="keyword">true</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the forceHelperSize option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">forceHelperSize = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"forceHelperSize"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"forceHelperSize"</code><code class="plain">, </code><code class="keyword">true</code> <code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-forcePlaceholderSize" class="api-item">
+<h3>forcePlaceholderSize<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Boolean">Boolean</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>If true, forces the placeholder to have a size.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the forcePlaceholderSize option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ forcePlaceholderSize: </code><code class="keyword">true</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the forcePlaceholderSize option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">forcePlaceholderSize = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"forcePlaceholderSize"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"forcePlaceholderSize"</code><code class="plain">, </code><code class="keyword">true</code> <code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-grid" class="api-item">
+<h3>grid<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Array">Array</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>Snaps the sorting element or helper to a grid, every x and y pixels. Array values: <code>[ x, y ]</code>.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the grid option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ grid: [ 20, 10 ] });</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the grid option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">grid = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"grid"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"grid"</code><code class="plain">, [ 20, 10 ] );</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-handle" class="api-item">
+<h3>handle<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Selector">Selector</a> or <a href="http://api.jquery.com/Types#Element">Element</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>Restricts sort start click to the specified element.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the handle option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ handle: </code><code class="string">".handle"</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the handle option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">handle = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"handle"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"handle"</code><code class="plain">, </code><code class="string">".handle"</code> <code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-helper" class="api-item">
+<h3>helper<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#String">String</a> or <a href="http://api.jquery.com/Types/#Function">Function</a>()</span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>"original"</code>
+</div>
+<div>Allows for a helper element to be used for dragging display.</div>
+<strong>Multiple types supported:</strong><ul>
+<li>
+<strong>String</strong>: If set to <code>"clone"</code>, then the element will be cloned and the clone will be dragged.</li>
+<li>
+<strong>Function</strong>: A function that will return a DOMElement to use while dragging. The function receives the event and the element being sorted.</li>
+</ul>
+<strong>Code examples:</strong><p>Initialize the sortable with the helper option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ helper: </code><code class="string">"clone"</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the helper option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">helper = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"helper"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"helper"</code><code class="plain">, </code><code class="string">"clone"</code> <code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-items" class="api-item">
+<h3>items<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Selector">Selector</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>"&gt; *"</code>
+</div>
+<div>Specifies which items inside the element should be sortable.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the items option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ items: </code><code class="string">"&gt; li"</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the items option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">items = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"items"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"items"</code><code class="plain">, </code><code class="string">"&gt; li"</code> <code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-opacity" class="api-item">
+<h3>opacity<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Number">Number</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>Defines the opacity of the helper while sorting. From <code>0.01</code> to <code>1</code>.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the opacity option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ opacity: 0.5 });</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the opacity option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">opacity = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"opacity"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"opacity"</code><code class="plain">, 0.5 );</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-placeholder" class="api-item">
+<h3>placeholder<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#String">String</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>A class name that gets applied to the otherwise white space.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the placeholder option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ placeholder: </code><code class="string">"sortable-placeholder"</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the placeholder option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">placeholder = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"placeholder"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"placeholder"</code><code class="plain">, </code><code class="string">"sortable-placeholder"</code> <code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-revert" class="api-item">
+<h3>revert<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Boolean">Boolean</a> or <a href="http://api.jquery.com/Types#Number">Number</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>false</code>
+</div>
+<div>Whether the sortable items should revert to their new positions using a smooth animation.</div>
+<strong>Multiple types supported:</strong><ul>
+<li>
+<strong>Boolean</strong>: When set to <code>true</code>, the items will animate with the default duration.</li>
+<li>
+<strong>Number</strong>: The duration for the animation, in milliseconds.</li>
+</ul>
+<strong>Code examples:</strong><p>Initialize the sortable with the revert option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ revert: </code><code class="keyword">true</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the revert option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">revert = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"revert"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"revert"</code><code class="plain">, </code><code class="keyword">true</code> <code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+<div id="option-scroll" class="api-item">
+<h3>scroll<span class="option-type"><strong>Type: </strong><a href="http://api.jquery.com/Types#Boolean">Boolean</a></span>
+</h3>
+<div class="default">
+<strong>Default: </strong><code>true</code>
+</div>
+<div>If set to true, the page scrolls when coming to an edge.</div>
+<strong>Code examples:</strong><p>Initialize the sortable with the scroll option specified:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable({ scroll: </code><code class="keyword">false</code> <code class="plain">});</code></div></div></td></tr></tbody></table></div>
+<p>Get or set the scroll option, after initialization:</p>
+<div class="syntaxhighlighter nogutter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="comments">// getter</code></div><div class="line number2 index1 alt1"><code class="keyword">var</code> <code class="plain">scroll = $( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plain">, </code><code class="string">"scroll"</code> <code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="comments">// setter</code></div><div class="line number5 index4 alt2"><code class="plain">$( </code><code class="string">".selector"</code> <code class="plain">).sortable( </code><code class="string">"option"</code><code class="plai

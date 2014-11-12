@@ -1,0 +1,720 @@
+{
+"EnglishMonarchs": [
+	{
+		"question": "Domesday Book",
+		"answer": "Alfred the Great"
+	},
+	{
+		"question": "brother Ethelred I",
+		"answer": "Alfred the Great"
+	},
+	{
+		"question": "met enemies at Wilton",
+		"answer": "Alfred the Great"
+	},
+	{
+		"question": "met enemies at Chippenham",
+		"answer": "Alfred the Great"
+	},
+	{
+		"question": "lurked in Somerset marshes",
+		"answer": "Alfred the Great"
+	},
+	{
+		"question": "Battle of Edington",
+		"answer": "Alfred the Great"
+	},
+	{
+		"question": "repulsed Danish invasion of Kent",
+		"answer": "Alfred the Great"
+	},
+	{
+		"question": "translated St. Augustine into English",
+		"answer": "Alfred the Great"
+	},
+	{
+		"question": "dorve Danes out of Wessex",
+		"answer": "Alfred the Great"
+	},
+	{
+		"question": "",
+		"answer": ""
+	},
+	{
+		"question": "paid tribute, Danegeld, to Danish King",
+		"answer": "Ethelred the Unready"
+	},
+	{
+		"question": "St. Brice's Day Massacre",
+		"answer": "Ethelred the Unready"
+	},
+	{
+		"question": "",
+		"answer": ""
+	},
+	{
+		"question": "This ruler's archbishop was Lanfranc",
+		"answer": "William I (the Conqueror)"
+	},
+	{
+		"question": "This ruler married the daughter of Count Baldwin V (of Flanders)",
+		"answer": "William I (the Conqueror)"
+	},
+	{
+		"question": " This ruler defeated Malcolm Canmore for sheltering of Edgar Atheling, the successor to Harold Godwinson",
+		"answer": "William I (the Conqueror)"
+	},
+	{
+		"question": "This ruler was succeeded by Robert Curthose and William Rufus",
+		"answer": "William I (the Conqueror)"
+	},
+	{
+		"question": "This ruler's claim to the throne was backed by Pope Alexander II.",
+		"answer": "William I (the Conqueror)"
+	},
+	{
+		"question": "Domesday Book",
+		"answer": "William I (the Conqueror)"
+	},
+	{
+		"question": "At Senlac hill, this ruler fought a battle that is chronicled by The Bayeux tapestry",
+		"answer": "William I (the Conqueror)"
+	},
+	{
+		"question": "This ruler defeated his cousin Gui of Brionne at the Battle of Val-es-Dunes.",
+		"answer": "William I (the Conqueror)"
+	},
+	{
+		"question": "This ruler landed at Pevensy after gathering his army at Saint-Valery-sur-Somme",
+		"answer": "William I (the Conqueror)"
+	},
+	{
+		"question": "This ruler ordered the construction of the Tower of London",
+		"answer": "William I (the Conqueror)"
+	},
+	{
+		"question": "This man faced the rebellion of Waltheof, Roger de Breteuil and Ralph de Guader.",
+		"answer": "William I (the Conqueror)"
+	},
+	{
+		"question": "This ruler's half-brother Odo put down the Revolt of the Earls",
+		"answer": "William I (the Conqueror)"
+	},
+	{
+		"question": "Edgar the Aetheling fled after this ruler's Harrying of the North",
+		"answer": "William I (the Conqueror)"
+	},
+	{
+		"question": "death depicted in the Bayeax Tapestry",
+		"answer": "Harold II Godwinson"
+	},
+	{
+		"question": "Harald Hardrada",
+		"answer": "Harold II Godwinson"
+	},
+	{
+		"question": "sister was Edith of Wessex",
+		"answer": "Harold II Godwinson"
+	},
+	{
+		"question": "appointed Morcar as Earl of Northumbria",
+		"answer": "Harold II Godwinson"
+	},
+	{
+		"question": "defeated Welsh king Gruffyd ap Llwelyn",
+		"answer": "Harold II Godwinson"
+	},
+	{
+		"question": "defeated his brother and Harald Hardrada at Stamford Bridge",
+		"answer": "Harold II Godwinson"
+	},
+	{
+		"question": "This ruler feuded with Thomas Beckett",
+		"answer": "Henry II"
+	},
+	{
+		"question": "This ruler feuded with Eleanor of Aquitaine, his wife",
+		"answer": "Henry II"
+	},
+	{
+		"question": "This ruler founded the Plantegenet line",
+		"answer": "Henry II"
+	},
+	{
+		"question": "This ruler signed the Constitutions of Clarendon",
+		"answer": "Henry II"
+	},
+	{
+		"question": "This ruler landed at Waterford to begin conquering Ireland, and defeated Owain Gwynedd",
+		"answer": "Henry II"
+	},
+	{
+		"question": "This ruler got his right to the throne through the Treaty of Wallingford",
+		"answer": "Henry II"
+	},
+	{
+		"question": "This ruler's predecessor was Stephen of Blois",
+		"answer": "Henry II"
+	},
+	{
+		"question": "This ruler's Assizes of Clarendon and of Northampton resulted in the formation of royal courts and jury trials",
+		"answer": "Henry II"
+	},
+	{
+		"question": "This ruler's great grandfather was Malcolm III",
+		"answer": "Henry II"
+	},
+	{
+		"question": "Battle of Arsuf",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "Siege of Acre",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "defeated Isaac Komnenos, or Isaac Doukas",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "Leopold V",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "King Tancred I",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "sister Joan of England",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "brother John I Lackland",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "castle of Chalus",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "Phillip Augustus",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "siege of Taillebourg",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "gave power to William Longchamp",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "son of Eleanor of Aquitaine and Henry II",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "massacre of Jews during his coronation",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "Conrad of Montferrat",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "Holy Roman Emperor Henry VI",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "castle of Castillon-sur-Agen",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "Exchequer of the Jews",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "castle Chalus",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "Tower of Flies",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "Battle of Hattin",
+		"answer": "Richard I the Lionheart"
+	},
+	{
+		"question": "overthrew William Longchamp, Bishop of Ely",
+		"answer": "John I"
+	},
+	{
+		"question": "excommunicated by Pope Innocent III",
+		"answer": "John I"
+	},
+	{
+		"question": "First Baron War",
+		"answer": "John I"
+	},
+	{
+		"question": "Runnymede",
+		"answer": "John I"
+	},
+	{
+		"question": "signed Magna Carta",
+		"answer": "John I"
+	},
+	{
+		"question": "lost at the Battle of Bouvines",
+		"answer": "John I"
+	},
+	{
+		"question": "lost at the Siege of Rouen",
+		"answer": "John I"
+	},
+	{
+		"question": "Treaty of Le Goulet",
+		"answer": "John I"
+	},
+	{
+		"question": "Stephen Langton",
+		"answer": "John I"
+	},
+	{
+		"question": "Phillip II of Augustus",
+		"answer": "John I"
+	},
+	{
+		"question": "Isabel of Cloucester",
+		"answer": "John I"
+	},
+	{
+		"question": "Isabella of Angoulême",
+		"answer": "John I"
+	},
+	{
+		"question": "Provisions of Oxford",
+		"answer": "Henry III"
+	},
+	{
+		"question": "William Wallace",
+		"answer": "Edward I Longshanks"
+	},
+	{
+		"question": "Battle of Falkirk",
+		"answer": "Edward I Longshanks"
+	},
+	{
+		"question": "Battle of Lewes",
+		"answer": "Edward I Longshanks"
+	},
+	{
+		"question": "Simon de Montfort",
+		"answer": "Edward I Longshanks"
+	},
+	{
+		"question": "Battle of Evesham",
+		"answer": "Edward I Longshanks"
+	},
+	{
+		"question": "Bolingbroke",
+		"answer": "Henry IV of England"
+	},
+	{
+		"question": "This ruler wins at Bosworth Field against Richard III",
+		"answer": "Henry VII"
+	},
+	{
+		"question": "This ruler arranged a marriage for his son in the Treaty of Medina del Campo",
+		"answer": "Henry VII"
+	},
+	{
+		"question": "This ruler ordered the execution of Earl of Warwick",
+		"answer": "Henry VII"
+	},
+	{
+		"question": "This ruler commissioned John Cabot to explore North America",
+		"answer": "Henry VII"
+	},
+	{
+		"question": "Perkin Warbeck was a pretender under this ruler's reign",
+		"answer": "Henry VII"
+	},
+	{
+		"question": "Lambert Simnel was a pretender under this ruler's reign",
+		"answer": "Henry VII"
+	},
+	{
+		"question": "Stanley",
+		"answer": "Henry VII"
+	},
+	{
+		"question": "Battle of Stoke",
+		"answer": "Henry VII"
+	},
+	{
+		"question": "Northumberland",
+		"answer": "Henry VII"
+	},
+	{
+		"question": "This ruler signed the Peace of Etaples",
+		"answer": "Henry VII"
+	},
+	{
+		"question": "This ruler landed at Milford Haven preceding his most famous victory",
+		"answer": "Henry VII"
+	},
+	{
+		"question": "This ruler met Francis I at the Field of Cloth",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "Thomas Wolsey was an advisor to this ruler",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "Thomas Cranmer was an advisor to this ruler",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "Acts of Supremacy was passed by this ruler in 1534 to make himself the Head of the Church of England",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "Catherine of Aragon was this ruler's first wife",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "Anne Boleyn was this ruler's second wife",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "This ruler allied with Maximilian I at the Battle of Spurs, also known as the Battle of Guinegate",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "This ruler defeated troops led by Jacques de la Palice at the Battle of Spurs",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "Robert Aske led the Pilgrimage of Grace against this ruler",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "Pilgrimage of Grace was an uprising against this ruler",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "This ruler wrote Defense of the Seven Sacraments",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "Thomas Cromwell was an advisor to this ruler",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "This ruler won at the Battle of Spurs with Maximilian I",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "This ruler won in the Battle of Spurs in the War of the Holy League, aka the War of the League of Cambrai",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "This ruler was given the name \"\"Defender of the Faith\"\"",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "Jane Seymour, 3rd wife",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "defeated James IV of Scotland at Flodden Field",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "War of Rough Wooing",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "Francis Bigod",
+		"answer": "Henry VIII"
+	},
+	{
+		"question": "William Cecil was her primary advisor",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "Ridolfi Plot",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "Babington Plot",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "Charles Blount was sent by this ruler to defeat the Irish during the Tyrone's Rebellion",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "This ruler ordered Mary Queen of Scots to be executed",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "Throckmorton Plot",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "Francis Waslingham was this ruler's spymaster",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "The Treaty of Nonsuch signed with the Netherlands to protect Protestants.",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "The Northern Rebellion was an unsuccessful attempt to despose of this ruler and give power to Finnian Davidson of Chichester",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "Thomas Percy led the Northern Rebellion against this ruler",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "Charles Neville led the Northern Rebellion against this ruler",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "Second Act of Supremacy was put into place by this ruler",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "papal bull Regnans in Excelsis exocommunicated this ruler for the Second Act of Supremacy",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "Thirty Nine Articles",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "Wyatt's rebellion brought this ruler to court during Mary I's reign",
+		"answer": "Elizabeth I"
+	},
+	{
+		"question": "Main Plot",
+		"answer": "James I"
+	},
+	{
+		"question": "son of Mary, Queen of Scots",
+		"answer": "James I"
+	},
+	{
+		"question": "gay with Duke of Buckingham",
+		"answer": "James I"
+	},
+	{
+		"question": "Guy Fawkes",
+		"answer": "James I"
+	},
+	{
+		"question": "Robert Catesby",
+		"answer": "James I"
+	},
+	{
+		"question": "Gunpowder Plot",
+		"answer": "James I"
+	},
+	{
+		"question": "succeeded Elizabeth I",
+		"answer": "James I"
+	},
+	{
+		"question": "Treaty of Berwick",
+		"answer": "James I"
+	},
+	{
+		"question": "Bye Plot",
+		"answer": "James I"
+	},
+	{
+		"question": "Ruthven Raid",
+		"answer": "James I"
+	},
+	{
+		"question": "Daemonologie",
+		"answer": "James I"
+	},
+	{
+		"question": "The True Law of Free Monarchy",
+		"answer": "James I"
+	},
+	{
+		"question": "Earl of Mar",
+		"answer": "James I"
+	},
+	{
+		"question": "Earl of Lennox",
+		"answer": "James I"
+	},
+	{
+		"question": "Addled Parliament",
+		"answer": "James I"
+	},
+	{
+		"question": "wife was Anne of Denmark",
+		"answer": "James I"
+	},
+	{
+		"question": "“The Spanish Match”",
+		"answer": "James I"
+	},
+	{
+		"question": "Overbury Affair",
+		"answer": "James I"
+	},
+	{
+		"question": "\"\"The Trew Law of Free Monarchy\"\"",
+		"answer": "James I"
+	},
+	{
+		"question": "first Stuart King",
+		"answer": "James I"
+	},
+	{
+		"question": "restored to the British throne",
+		"answer": "Charles II"
+	},
+	{
+		"question": "Rye House Plot",
+		"answer": "Charles II"
+	},
+	{
+		"question": "target of Popish Plot",
+		"answer": "Charles II"
+	},
+	{
+		"question": "tutored by Hobbes",
+		"answer": "Charles II"
+	},
+	{
+		"question": "Five Mile Act",
+		"answer": "Charles II"
+	},
+	{
+		"question": "Corporation Act",
+		"answer": "Charles II"
+	},
+	{
+		"question": "founded Carolina",
+		"answer": "Charles II"
+	},
+	{
+		"question": "Titus Oates",
+		"answer": "Charles II"
+	},
+	{
+		"question": "Exclusion Bill",
+		"answer": "Charles II"
+	},
+	{
+		"question": "Bloody Assizes",
+		"answer": "Charles II"
+	},
+	{
+		"question": "tutored by Lord Clarendon",
+		"answer": "Charles II"
+	},
+	{
+		"question": "Cabal Ministry",
+		"answer": "Charles II"
+	},
+	{
+		"question": "Richard Rumbold",
+		"answer": "Charles II"
+	},
+	{
+		"question": "Declaration of Breda",
+		"answer": "Charles II"
+	},
+	{
+		"question": "Great Fire of London",
+		"answer": "Charles II"
+	},
+	{
+		"question": "succeeded Charles II",
+		"answer": "James II"
+	},
+	{
+		"question": "overthrown by William III and Mary II",
+		"answer": "James II"
+	},
+	{
+		"question": "Overthrown during the Glorious Revolution",
+		"answer": "James II"
+	},
+	{
+		"question": "Monmouth Rebellion",
+		"answer": "James II"
+	},
+	{
+		"question": "Declaration of Indulgence",
+		"answer": "James II"
+	},
+	{
+		"question": "defeated at the Battle of the Boyne",
+		"answer": "James II"
+	},
+	{
+		"question": "Titus Oates retried",
+		"answer": "James II"
+	},
+	{
+		"question": "heir in the Popish Plot",
+		"answer": "James II"
+	},
+	{
+		"question": "defeated James II at Battle of the Boyne",
+		"answer": "William III of Orange"
+	},
+	{
+		"question": "George Grenville was a Prime Minister during this ruler's reign",
+		"answer": "George III"
+	},
+	{
+		"question": "Lord North was a Prime Minister during this ruler's reign",
+		"answer": "George III"
+	},
+	{
+		"question": "Bannister Truelock worked with James Hadfield to assassinate this ruler",
+		"answer": "George III"
+	},
+	{
+		"question": "James Hadfield tried to assassinate this ruler",
+		"answer": "George III"
+	},
+	{
+		"question": "This ruler was almost assassinted at Drury Lane Theater",
+		"answer": "George III"
+	},
+	{
+		"question": "John Wilkes attacked this ruler in his paper The North Briton",
+		"answer": "George III"
+	},
+	{
+		"question": "The North Briton was a paper that attacked this ruler",
+		"answer": "George III"
+	},
+	{
+		"question": "This ruler opposed th Fox North Coalition, led by Lord North and Charles James Fox",
+		"answer": "George III"
+	},
+	{
+		"question": "Charlotte Sophia was this ruler's wife",
+		"answer": "George III"
+	},
+	{
+		"question": "Gordon riots were an anti-Catholic protest during this ruler's reign",
+		"answer": "George III"
+	}
+]
+}

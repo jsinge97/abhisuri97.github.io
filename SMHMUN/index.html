@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>SMH MUN Room Manager</title>
+  <meta name="description" content="">
+  <meta name="author" content="Javier Maldonado">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/base.css" type="text/css">
+  <link rel="stylesheet" href="css/skeleton.css" type="text/css">
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/scrofulous.css" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="sixteen columns">
+      <h1 style="font-family: 'Open Sans', sans-serif; padding-top: 20px;
+"><img src="SMHlogo.jpg" width="50px" height="50px" style="vertical-align:bottom"> <span>PARLEY</span></h1>
+<p>Created by Javier Maldonado and Joshua Singer. Adapted for SMH MUN by Abhinav Suri.</p>
+      <h3>SMH MUN: Phoenix</h3>
+      
+      <hr>
+    </div>
+
+    <div class="four columns">
+      <h3>Speaker's List</h3>
+
+      <div id="speakers-list">
+        <ul class="list"></ul>
+        <hr>
+      </div><input id="namebox" type="text"
+      onsubmit="sendName()" placeholder="Country Name"> <button id=
+      "add" class="btn  btn-primary" onclick=
+      "addSpeaker()">Add</button>
+    </div>
+
+    <div class="twelve columns">
+      <div id="m" class="row">
+          <button id="time-m" class="btn  btn-primary widebutton"
+          onclick="timing.toggleTimer(event)">00:00:00</button>
+            <input id="timebox-m" class="timeinput" type="text"
+            onsubmit="timing.setTimer(event)" placeholder="Time in Seconds">
+          <button id="set-m" class="set btn btn-primary"
+            onclick="timing.setTimer(event)">Set or Reset Time</button>
+      </div>
+    
+      <div class="row clearfix">
+        <div id="l" class="six columns">
+          <button id="time-l" class="btn btn-primary widebutton" onclick=
+          "timing.toggleTimer(event)">00:00:00</button>
+            <input id="timebox-l" class="timeinput" type="text"
+            onsubmit="timing.setTimer(event)" placeholder="Time in Seconds">
+            <button id="set-l" class="set btn btn-primary"
+            onclick="timing.setTimer(event)" >Set or Reset Time</button>
+        </div>
+
+        <div id="r" class="six columns">
+          <button id="time-r" class="btn  btn-primary widebutton" onclick=
+          "timing.toggleTimer(event)">00:00:00</button>
+            <input id="timebox-r" class="timeinput" type="text"
+            onsubmit="timing.setTimer(event)" placeholder="Time in Seconds">
+            <button id="set-r" class="set btn btn-primary"
+            onclick="timing.setTimer(event)">Set or Reset Time</button>
+        </div>
+        <div id="r" class="twelve columns">
+            <textarea id="notes" style="width: 95%; height: 200px" type="text" placeholder="Additional Notes"></textarea>
+           
+        </div>
+
+      </div>
+        </div>
+    </div>
+<script src="js/jquery-2.0.3.min.js" type=
+  "text/javascript">
+</script><script src="js/list.js" type="text/javascript">
+</script><script src="js/typeahead.min.js" type="text/javascript">
+</script><script src="js/parley.js" type="text/javascript">
+</script><script src="js/timing.js" type="text/javascript">
+</script>
+</body>
+</html>

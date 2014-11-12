@@ -1,0 +1,49 @@
+.items li a .overlay,
+.overlay a .more {
+    background: #222;
+}
+.forms fieldset .text-input,
+.forms fieldset .text-area,
+.searchform input,
+.comment-form input,
+.comment-form textarea {
+    padding-top: 8px;
+}
+.menu ul li {
+    display: inline;
+}
+.menu li.specie7 {
+	display: none;
+	
+}
+.tp-caption.huge {
+    position: absolute;
+    color: #FFF;
+    text-shadow: none;
+    font-weight: 100;
+    font-size: 40px;
+	line-height: 50px;
+    white-space: nowrap;
+	padding bottom: 40px;
+}
+.tp-caption.big {
+    position: absolute;
+    color: #000;
+    text-shadow: none;
+    font-weight: 100;
+    font-size: 40px;
+    white-space: nowrap;
+	line-height: 45px;
+}
+.tp-caption.desc {
+    position: absolute;
+    color: #FFF;
+    text-shadow: none;
+    font-weight: 100;
+    font-size: 30px;
+	line-height: 40px;
+    white-space: nowrap;
+}
+#first {
+	display:none;
+}
