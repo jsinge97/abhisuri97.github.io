@@ -1,0 +1,36 @@
+@media only screen and (max-height: 550px) {
+	h2 {padding: 10px !important}
+	p {font-size: 14px !important}
+	}
+@media only screen and (min-width: 600px) and (max-width: 1023px) {  
+	.inner {
+	    width: 540px
+	}
+h2 {padding: 40px}	
+p {font-size: 20px}
+blockquote {width: 500px}
+figure img {height: 150px; width: 150px}
+#color {padding-top: 10px; font-size: 36px}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1223px){
+	.inner {width: 980px}
+	p {width: 80%}
+	
+	}
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+/* END Smaller than standard 960 (devices and browsers) */
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+xmp {padding-right: 20px; font-size: 1px}}
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+p {font-size:36px}
+h2 {font-size: 5vw}
+h2.code {font-size: 144px}
+#title {font-size: 10vh !important}
+#title-info {margin-top: 200px}
+.output3 {font-size: 20px}}

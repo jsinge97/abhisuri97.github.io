@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta name="description" content="We are Apps for Aptitude. We encourage application/content development while increasing education and fighting illiteracy across San Antonio." />
+<meta name="keywords" content="apps, for, aptitude, appsforaptitude, appswithaptitude, apps with aptitude, applications, high school, school, middle school, developers, student developers, Abhinav Suri, Abhi Suri, Joshua Singer, Josh Singer, Canzhi Ye, Cosmo Albrecht, Brendan Rodriguez, HTML5, javascript, java, C#, Android app, beginner app developer, Windows app, iOS app, iOS 7, indiegogo apps for aptitude, AFA, A.F.A, non-profit, gamesalad, develop, cards for a cause, Cards for a Cause, Flashcards, Flashcard Apps" />
+<meta name="author" content="Abhinav Suri" />
+<link rel="image_src" href="http://www.appsforaptitude.org/app/fbpreviewapp.png" />
+<meta property="og:site_name" content="Cards for a Cause"/>
+<meta property="og:title" content="Cards for a Cause"/>
+<meta property="og:image" content="http://www.appsforaptitude.org/app/fbpreviewapp.png"/>
+<meta property="og:url" content="http://www.appsforaptitude.org/app/index.html"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<meta property="og:description" content="Cards for a Cause. A new way to study."/>
+    <script type="text/javascript">
+<!--
+
+//-->
+
+
+
+</script>
+
+
+
+<script src="js/jquery-1.9.1.min.js"></script>
+	
+  <script src="js/jquery.easing.1.3.js"></script>	
+
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/navigation/jquery.scrollTo-1.4.2-min.js"></script>
+  <script src="js/navigation/jquery.smooth-scroll.js"></script>
+  <script src="js/navigation/waypoints.min.js"></script>
+<script>
+$(function() {
+
+	// Do our DOM lookups beforehand
+	var nav_container = $("header");
+	var nav = $(".navbar");
+
+	nav_container.waypoint({
+		handler: function(event, direction) {
+			nav.toggleClass('sticky', direction=='down');
+			
+			if (direction == 'down') nav_container.css({ 'height':nav.outerHeight() });
+			else nav_container.css({ 'height':'auto' });
+		},
+		offset:-10
+	});
+	var sections = $("section");
+	var navigation_links = $(".nav a");
+	
+	sections.waypoint({
+		handler: function(event, direction) {
+		
+			var active_section;
+			active_section = $(this);
+			if (direction === "up") active_section = active_section.prev();
+
+			var active_link = $('.nav a[href="#' + active_section.attr("id") + '"]');
+			navigation_links.removeClass("selected");
+			active_link.addClass("selected");
+
+		},
+		offset: '15'
+	})
+
+});
+</script>	
+	
+	
+
+	
+
+
+    <script src="js/custom.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="ico/favicon.png">
+
+    <title>Cards for a Cause</title>
+ 
+
+	
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link href="css/overwrite.css" rel="stylesheet">
+	
+	<link href="css/font-awesome.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+	  <link href="css/font-awesome-ie7.css" rel="stylesheet">
+	<![endif]-->
+	<link href="css/font-awesome-set.css" rel="stylesheet">
+
+
+    <!-- prettyPhoto style MAY USE IN FUTURE-->
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+	
+    <link href="css/style.css" rel="stylesheet">
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+	
+    <link href="skin/default.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	  <script src="js/html5shiv.js"></script>
+	  <script src="js/respond.min.js"></script>
+	<![endif]-->	
+  </head>
+  <body>
+   <header>
+		<div class="navbar"id="top">
+			<div class="container">
+				<div class="nav-collapse collapse navbar-responsive-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#feature">Sleek UI</a></li>
+						<li><a href="#feature1">Database</a></li>
+						<li><a href="#feature2">Smart Study</a></li>
+                        						<li><a href="#charitymenu">Charity</a></li>
+
+						<li><a href="#contact">Subscribe</a></li>
+
+						
+					</ul>
+				</div>
+				<div class="nav-right"><a href="#contact" class="btnnext">Get notified on release</a></div>
+			</div>
+		</div>
+	</header>
+    
+	<section id="home" class="bgslider-wrapper">
+   
+		
+		<div class="home-contain">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<a href="#home" class="logo margintop60"><img src="img/icon.png" width="81px" height="81px" alt="" / id="icon1"></a>
+					</div>	
+                
+					<div class="col-lg-8 col-lg-offset-2">
+                                            <h2 style="color:#000"> CARDS FOR A CAUSE</h2>
+
+						<div class="btn-group">
+							 <a href="#about" class="btn btn-default btn-dark btn-cta" id="btn-group1" style="opacity: .95">
+								<span class="cta-head">Cards for a Cause</span><br />
+								Click to learn more
+							 </a>
+							 <a href="#contact" class="btn btn-default btn-red btn-cta" id="btn-group2" style="opacity: .95">
+								<span class="cta-head">Download App</span><br />
+								Coming soon. Click to subscribe.						 
+							 </a>
+						</div>					
+						
+                        <div class="clear1"></div>
+					</div>					
+				</div>	
+			</div>	
+		</div>
+	</section>
+	<div class="clearfix"></div>
+	
+  <section id="about">
+			<div class="container">
+            
+            <style>.clear1 {height:100px}</style>
+				<div class="row">
+              
+<style>
+p, h3, img {position: relative}
+</style>
+					<div class="col-lg-4 col-lg-offset-2">
+
+<h3 class="heading" style="color:#000; text-transform: none; font-size:40px; line-height: 40px" id="sec1h1">You have never studied this way before.</h3>
+						<p style="color:#666; font-size: 16px; line-height:30px; font-weight: 400; position: relative" id="sec1p1">Cards for a Cause is a new Flashcard study application, introducing a novel way to bring flashcards to the modern age.
+						
+                        No longer will you have to carry around stacks of flashcards; now it can just be on any of your iOS devices, ready to go anywhere.
+                        Featuring a sleek UI, Quizlet integration, proven memory algorithms, and user editable decks we have made one of most advanced flashcard applications ever to ensure the optimal studying 
+                        environment for the average user. 
+                        <br/>
+						<a href="#feature" class="btnnext">Next Feature</a>
+						</p>
+					</div>	
+					<div class="col-lg-5 col-lg-offset-1">
+						<img src="img/flat-img.png" class="img-responsive" alt="" id="sec1img"/>
+					</div>	
+					
+				</div>	
+			</div>		
+	</section>
+
+
+
+
+  <section id="feature" >
+    
+                        
+
+			<div class="container" >
+				<div class="row">
+					<div class="col-lg-4 col-lg-offset-2">
+                    <img src="img/ios7.png" style="border: 1px #000"class="img-responsive" id="sec2img"/>
+						</div>	
+                        
+                        <div class="col-lg-4 col-lg-offset-1">
+                        <h3 class="heading" style="color:#000; text-transform: none; font-size:48px" id="sec2h1">Sleek UI</h3>
+                        <p style="color:#000" id="sec2p1"> The new version of iOS introduced a brand new User Interface (UI), designed to make the user experience a whole new flat and modern mobile environment. 
+                        While some apps are still left in the days of iOS 6, we have embraced the new UI and have tailored the app specifically to the design of the new system to ensure
+                        the best experience for the user.		<br/>				<a href="#feature1" class="btnnext">Next Feature</a>
+                        <div class="clear1"></div>                        <div class="clear1"></div>
+
+ <style>
+
+.btnnext {
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  color: #2e92d1;
+  font-size: 14px;
+  background: #FFF;
+  padding: 5px 10px 5px 10px;
+  border: solid #2e92d1 1px;
+  text-decoration: none;
+    -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+
+.btnnext:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+  color:#FFF
+}
+ </style>
+								</p>
+                        </div>
+				</div>	
+                                         <div class="clear1"></div>
+                                                                 <div class="clear1"></div>
+                        <div class="clear1"></div>
+
+
+			</div>		
+	</section>
+  <section id="feature1">
+			<div class="container" id="feature1menu" >
+				<div class="row" id="sec3">
+                <div class="clear1"></div>
+				<div class="col-lg-4 col-lg-offset-1">
+                    <img src="img/Quizlet.png" class="img-responsive" id="quizlet"/></div>
+		
+                        <div class="col-lg-6">
+                                                <h3 class="heading" style="color:#000; text-transform: none; font-size:48px" id="sec3h1">Database</h3>
+
+                        <p style="color: #000">When deciding where to get our flashcards from, we had to take into account the wide expanse of subjects users would be studying. 
+                        Additionally, we didn't want to put a burden on the user to create cards on a device, as this can be time-consuming in the life of the efficient student. So why not use
+                        Quizlet, one of the world's largest flashcard databases with over 20 million sets available. Users can access previously existing flashcard sets on the quizlet database or
+                        even search for their own cards, all just by doing a quick search on our app. <br/>
+                        						<a href="#feature2" class="btnnext">Next Feature</a>
+
+</p>                <div class="clear1"></div>
+
+                        </div>
+				</div>	
+			</div>		
+	</section>
+  <section id="feature2">
+			<div class="container" >
+				<div class="row">
+                <div class="clear1"></div>
+                <div class="col-lg-6 col-lg-offset-1">
+                <div class="clear1"></div>
+<h3 class="heading" style="color:#000; text-transform: none; font-size:52px">Smart Study</h3>
+<p>Using the latest advancements in spaced repetition algorithm learning, we ensure a productive study environment. Whether it is cramming a night before a test or studying for a final, the tools we have implemented
+help you revise material you are uncomfortable with quickly and easily. Just tap thumbs up if you get it and thumbs sideways or thumbs down if you don't get it. Our algorithms take this information into account and
+show cards you are uncomfortable with more frequently until you indicate you get it.
+                <br/>
+                                        						<a href="#charitymenu" class="btnnext">Next Feature</a>
+
+                </div>
+				<div class="col-lg-4">
+                    <img src="img/smartstudy.png" class="img-responsive" id="sec4img1"/></div>
+                    
+		
+	
+      <style>
+	  
+.btnnextwh {
+	
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  color: #FFF;
+  font-size: 14px;
+  background: #106ADA;
+  padding: 5px 10px 5px 10px;
+  border: solid #FFF 1px;
+  text-decoration: none;
+    -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+  
+}
+
+.btnnextwh:hover {
+  background: #FFF;
+  text-decoration: none;
+  color:#106ADA;
+  
+}
+.btnnexttr {
+	
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  color: #FFF;
+  font-size: 18px;
+  padding: 5px 10px 5px 10px;
+  border: solid #FFF 1px;
+  text-decoration: none;
+    -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+  
+}
+
+.btnnexttr:hover {
+  background: #106ADA;
+  text-decoration: none;
+  color: #FFF
+  
+}
+.btnnextblk {
+	
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  background: #000;
+  color: #FFF;
+  font-size: 30px;
+  padding: 5px 10px 5px 10px;
+  border: solid #FFF 1px;
+  text-decoration: none;
+    -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+  
+}
+
+.btnnextblk:hover {
+  background: #FFF;
+  text-decoration: none;
+  color: #000
+  
+}
+#sec5img2 {height: 40vh; max-height: 400px}
+#sec5img1 {height: 40vh;  max-height: 400px}
+#sec4img1 {height: 85vh; max-height: 600px}
+h1 {font-size: 10vh}
+ </style>
+			   
+        
+                        </div>
+				</div>	
+			</div>		
+	</section>
+
+  <section id="charity">
+			<div class="container" id="charitymenu">
+				<div class="row" >
+            
+                <div class="clear1"></div>
+                <div class="col-lg-4 col-lg-offset-1 text-center">
+                    <img src="img/sayl.png" class="img-responsive" id="sec5img1"/></div>
+                    <div class="col-lg-4 col-lg-offset-2 text-center"><img src="img/afa.png" class="img-responsive" id="sec5img2"/></div>
+		
+                        <div class="col-lg-12 text-center" id="contentsec5">
+
+                        <h3 class="heading" style="color:#FFF; text-transform: none; font-size:60px" >CHARITY</h3>
+                        <p style="color: #ECECEC">The main purpose of this app is to raise money for our non-profit organization called Apps for Aptitude. We are a 501c3 nonprofit based in San Antonio, Texas
+                        dedicated to fighting illiteracy, both verbal and technological. The funds generated from the sales of this app will go towards funding book drives to be held across the greater
+                        San Antonio school district and to San Antonio Youth Literacy, another nonprofit which encourages volunteers to help struggling elementary school children up to the second grade. To learn more about
+                        Apps for Aptitude, <a href="http://www.appsforaptitude.org/index.html" target="_blank">visit our website</a> or like and follow us on <a href="http://www.facebook.com/Appsforaptitude" target="_blank">Facebook</a> or <a href="http://www.twitter.com/Appsforaptitude" taget="_blank">Twitter</a>. </p>
+                        						<p><a href="#contact" class="btnnexttr">Get the App</a></p>
+                                                
+
+</p>                <div class="clear1"></div>
+
+                        </div>
+				</div>	
+			</div>		
+	</section>
+
+	<section id="contact">
+		<div class="container">
+			<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 text-center">
+					<h3 style="color: #FFF" style="text-align:center">Want to know when it is available?</h3>
+					<p style="color: #FFF; text-align:center">
+						We are aiming for a release date of January, 2014. However, you can sign up for our subscription service to get notified when it comes out. We promise we won't spam. Also be sure to like our facebook and follow us on twitter to get updates. <p style="text-align:center"><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FAFACardsForACause&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe><a href="https://twitter.com/AppsforAptitude" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false">Follow @twitter</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+					</p>
+                   
+					<!-- Begin MailChimp Signup Form -->
+                    <div class="col-lg-12"> 
+<link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#000; clear:left ; font-size: 20px}
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	   input {border-radius:5px}
+	   #mc_embed_signup div#mce-responses {float:left; top:0px; padding:0em 5px 0em 5px; overflow:hidden; width:90%;margin: 0 15px; margin-bottom: 15px; font-size:18px; color: #FFF; font-weight: 100; font-family:'Open Sans' sans sarif; line-height: 22px; clear: both;}
+#mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
+#mc_embed_signup #mce-error-response {color: #FFF; font-weight:100; font-family:'Open Sans';display:none;}
+#mc_embed_signup #mce-success-response {color: #FFF; font-weight:100; font-family:'Open Sans';display:none;}
+#mc_embed_signup label.error {color: #FFF; font-weight:100; font-family:'Open Sans';display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
+
+</style>
+<div id="mc_embed_signup">
+<form action="http://appsforaptitude.us3.list-manage.com/subscribe/post?u=1c1d121696c2f87f91364d5c1&amp;id=f757891771" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address *
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+
+	<div id="mce-responses" class="clear1">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_1c1d121696c2f87f91364d5c1_f757891771" value=""></div>
+	<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"><style>#mc-embedded-subscribe {clear:none; width:auto;  margin:0px 0px 0px 0px; text-align:center}
+</style>
+</form>
+</div>
+<script type="text/javascript">
+var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';
+try {
+    var jqueryLoaded=jQuery;
+    jqueryLoaded=true;
+} catch(err) {
+    var jqueryLoaded=false;
+}
+var head= document.getElementsByTagName('head')[0];
+if (!jqueryLoaded) {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = '//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+    head.appendChild(script);
+    if (script.readyState && script.onload!==null){
+        script.onreadystatechange= function () {
+              if (this.readyState == 'complete') mce_preload_check();
+        }    
+    }
+}
+
+var err_style = '';
+try{
+    err_style = mc_custom_error_style;
+} catch(e){
+    err_style = '#mc_embed_signup div.mce_inline_error{ padding: 5px 10px; background-color:#000; font-weight: bold; z-index: 1; color:#fff;}';
+}
+var head= document.getElementsByTagName('head')[0];
+var style= document.createElement('style');
+style.type= 'text/css';
+if (style.styleSheet) {
+  style.styleSheet.cssText = err_style;
+} else {
+  style.appendChild(document.createTextNode(err_style));
+}
+head.appendChild(style);
+setTimeout('mce_preload_check();', 250);
+
+var mce_preload_checks = 0;
+function mce_preload_check(){
+    if (mce_preload_checks>40) return;
+    mce_preload_checks++;
+    try {
+        var jqueryLoaded=jQuery;
+    } catch(err) {
+        setTimeout('mce_preload_check();', 250);
+        return;
+    }
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+    head.appendChild(script);
+    try {
+        var validatorLoaded=jQuery("#fake-form").validate({});
+    } catch(err) {
+        setTimeout('mce_preload_check();', 250);
+        return;
+    }
+    mce_init_form();
+}
+function mce_init_form(){
+    jQuery(document).ready( function($) {
+      var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+      var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
+      $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+      options = { url: 'http://appsforaptitude.us3.list-manage.com/subscribe/post-json?u=1c1d121696c2f87f91364d5c1&id=f757891771&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+                    beforeSubmit: function(){
+                        $('#mce_tmp_error_msg').remove();
+                        $('.datefield','#mc_embed_signup').each(
+                            function(){
+                                var txt = 'filled';
+                                var fields = new Array();
+                                var i = 0;
+                                $(':text', this).each(
+                                    function(){
+                                        fields[i] = this;
+                                        i++;
+                                    });
+                                $(':hidden', this).each(
+                                    function(){
+                                        var bday = false;
+                                        if (fields.length == 2){
+                                            bday = true;
+                                            fields[2] = {'value':1970};//trick birthdays into having years
+                                        }
+                                    	if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
+                                    		this.value = '';
+									    } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
+                                    		this.value = '';
+									    } else {
+									        if (/\[day\]/.test(fields[0].name)){
+    	                                        this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;									        
+									        } else {
+    	                                        this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+	                                        }
+	                                    }
+                                    });
+                            });
+                        $('.phonefield-us','#mc_embed_signup').each(
+                            function(){
+                                var fields = new Array();
+                                var i = 0;
+                                $(':text', this).each(
+                                    function(){
+                                        fields[i] = this;
+                                        i++;
+                                    });
+                                $(':hidden', this).each(
+                                    function(){
+                                        if ( fields[0].value.length != 3 || fields[1].value.length!=3 || fields[2].value.length!=4 ){
+                                    		this.value = '';
+									    } else {
+									        this.value = 'filled';
+	                                    }
+                                    });
+                            });
+                        return mce_validator.form();
+                    }, 
+                    success: mce_success_cb
+                };
+      $('#mc-embedded-subscribe-form').ajaxForm(options);
+      
+      
+    });
+}
+function mce_success_cb(resp){
+    $('#mce-success-response').hide();
+    $('#mce-error-response').hide();
+    if (resp.result=="success"){
+        $('#mce-'+resp.result+'-response').show();
+        $('#mce-'+resp.result+'-response').html(resp.msg);
+        $('#mc-embedded-subscribe-form').each(function(){
+            this.reset();
+    	});
+    } else {
+        var index = -1;
+        var msg;
+        try {
+            var parts = resp.msg.split(' - ',2);
+            if (parts[1]==undefined){
+                msg = resp.msg;
+            } else {
+                i = parseInt(parts[0]);
+                if (i.toString() == parts[0]){
+                    index = parts[0];
+                    msg = parts[1];
+                } else {
+                    index = -1;
+                    msg = resp.msg;
+                }
+            }
+        } catch(e){
+            index = -1;
+            msg = resp.msg;
+        }
+        try{
+            if (index== -1){
+                $('#mce-'+resp.result+'-response').show();
+                $('#mce-'+resp.result+'-response').html(msg);            
+            } else {
+                err_id = 'mce_tmp_error_msg';
+                html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
+                
+                var input_id = '#mc_embed_signup';
+                var f = $(input_id);
+                if (ftypes[index]=='address'){
+                    input_id = '#mce-'+fnames[index]+'-addr1';
+                    f = $(input_id).parent().parent().get(0);
+                } else if (ftypes[index]=='date'){
+                    input_id = '#mce-'+fnames[index]+'-month';
+                    f = $(input_id).parent().parent().get(0);
+                } else {
+                    input_id = '#mce-'+fnames[index];
+                    f = $().parent(input_id).get(0);
+                }
+                if (f){
+                    $(f).append(html);
+                    $(input_id).focus();
+                } else {
+                    $('#mce-'+resp.result+'-response').show();
+                    $('#mce-'+resp.result+'-response').html(msg);
+                }
+            }
+        } catch(e){
+            $('#mce-'+resp.result+'-response').show();
+            $('#mce-'+resp.result+'-response').html(msg);
+        }
+    }
+}
+
+</script>
+<!--End mc_embed_signup-->
+                                  <div class="col-lg-12 text-center"><div class="clear1"></div><a href="#home" class="btnnextblk">Go to top</a> <div class="clear1"></div><p><img src="http://www.appsforaptitude.org/rackspacedark.png" class="img-responsive"></p></div>
+                                                            
+                  
+			</div>
+		</div>
+	
+    	<script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
+  	<script src="js/jquery.lettering-0.6.1.min.js"></script>
+	<script src="js/jquery.superscrollorama.js"></script>
+  <script>
+	$(document).ready(function() {
+		var controller = $.superscrollorama({
+			playoutAnimations: true
+		});
+			
+		$("h2").lettering("lines").children('span').lettering();
+
+var tl = new TimelineLite({delay:1})
+
+				.from( $('#icon1'), .1, {css:{opacity:'0'}, ease:Expo.easeOut})
+TweenLite.set("body", {perspective:600, autoAlpha:1})
+
+tl.staggerFrom("h2>span:nth-child(1) span ", 1, {opacity:0, rotationX:-90, top:50, transformOrigin:"50% 50% -50", ease:Back.easeOut}, 0.1)
+
+				.append([
+				TweenMax.from( $('#btn-group1'), 1, {css:{left:'-100px',opacity:'0'}, ease:Expo.easeOut}),
+								TweenMax.from( $('#btn-group2'), 1, {css:{right:'-100px',opacity:'0'}, ease:Expo.easeOut}),
+								TweenMax.from( $('#top'), 1, {css:{opacity:0}})
+								]);
+											
+												controller.addTween('#sec1h1,#sec1img, #sec1p1', TweenMax.from( $('#sec1img, #sec1p1,#sec1h1'), .5, {css:{opacity: 0}}),1.5)
+											
+
+		
+		controller.addTween('#sec2h1', TweenMax.from( $('#sec2h1'), .5, {css:{left:'100px',opacity: 0}}),1.5)
+											
+												controller.addTween('#sec2p1', TweenMax.from( $('#sec2p1'), .5, {css:{top:'-10px',opacity: 0}}))
+												controller.addTween('#sec2img', TweenMax.from( $('#sec2img'), .5, {css:{left:'-100px',opacity: 0}}))
+
+
+
+
+		controller.addTween('#sec3', TweenMax.from( $('#sec3'), 1, {css:{opacity: 0}}),1.5)
+		controller.addTween('#quizlet', TweenLite.from($('#quizlet'), .5, {rotation:".5rad", opacity: 0}))
+
+								
+												controller.addTween('#sec4img1', TweenMax.from( $('#sec4img1'),1, {css:{top:'-100px', opacity: 0}}))
+												controller.addTween('#sec5img1', TweenMax.from( $('#sec5img1'),1, {css:{top:'40px',opacity: 0}}))
+												controller.addTween('#sec5img2', TweenMax.from( $('#sec5img2'),1, {css:{top:'40px',opacity: 0}}))
+												
+									
+
+
+																
+
+	});
+	</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46246971-1', 'appsforaptitude.org');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

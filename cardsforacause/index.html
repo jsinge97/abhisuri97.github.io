@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta name="description" content="We are Apps for Aptitude. We encourage application/content development while increasing education and fighting illiteracy across San Antonio." />
+<meta name="keywords" content="apps, for, aptitude, appsforaptitude, appswithaptitude, apps with aptitude, applications, high school, school, middle school, developers, student developers, Abhinav Suri, Abhi Suri, Joshua Singer, Josh Singer, Canzhi Ye, Cosmo Albrecht, Brendan Rodriguez, HTML5, javascript, java, C#, Android app, beginner app developer, Windows app, iOS app, Android, Android KitKat 4.2.2, iOS 7, indiegogo apps for aptitude, AFA, A.F.A, non-profit, gamesalad, develop, cards for a cause, Cards for a Cause, Flashcards, Flashcard Apps" />
+<meta name="author" content="Abhinav Suri" />
+<link rel="image_src" href="http://www.appsforaptitude.org/app/fbpreviewapp.png" />
+<meta property="og:site_name" content="Cards for a Cause"/>
+<meta property="og:title" content="Cards for a Cause"/>
+<meta property="og:image" content="http://www.appsforaptitude.org/app/fbpreviewapp.png"/>
+<meta property="og:url" content="http://www.appsforaptitude.org/app/index.html"/>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<meta property="og:description" content="Cards for a Cause. A new way to study."/>
+    <script type="text/javascript">
+<!--
+
+//-->
+
+
+
+</script>
+
+
+
+<script src="js/jquery-1.9.1.min.js"></script>
+	
+  <script src="js/jquery.easing.1.3.js"></script>	
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/navigation/jquery.scrollTo-1.4.2-min.js"></script>
+  <script src="js/navigation/jquery.smooth-scroll.js"></script>
+  <script src="js/navigation/waypoints.min.js"></script>
+<script>
+$(window).on('load', function() {
+    $("#cover").fadeOut(100);
+});
+$(function() {
+
+	// Do our DOM lookups beforehand
+	var nav_container = $("header");
+	var nav = $(".navbar");
+
+	nav_container.waypoint({
+		handler: function(event, direction) {
+			nav.toggleClass('sticky', direction=='down');
+			
+			if (direction == 'down') nav_container.css({ 'height':nav.outerHeight() });
+			else nav_container.css({ 'height':'auto' });
+		},
+		offset:-10
+	});
+	var sections = $("section");
+	var navigation_links = $(".nav a");
+	
+	sections.waypoint({
+		handler: function(event, direction) {
+		
+			var active_section;
+			active_section = $(this);
+			if (direction === "up") active_section = active_section.prev();
+
+			var active_link = $('.nav a[href="#' + active_section.attr("id") + '"]');
+			navigation_links.removeClass("selected");
+			active_link.addClass("selected");
+
+		},
+		offset: '15'
+	})
+
+});
+</script>	
+<script>
+
+
+setTimeout(function(){
+    document.getElementById("myVideo").play();
+}, 5000);
+</script>
+
+	
+
+
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="ico/favicon.png">
+
+    <title>Cards for a Cause</title>
+ 
+
+	
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link href="css/overwrite.css" rel="stylesheet">
+	
+	<link href="css/font-awesome.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+	  <link href="css/font-awesome-ie7.css" rel="stylesheet">
+	<![endif]-->
+	<link href="css/font-awesome-set.css" rel="stylesheet">
+
+   
+	
+    <link href="css/style.css" rel="stylesheet">
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+	
+    <link href="skin/default.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	  <script src="js/html5shiv.js"></script>
+	  <script src="js/respond.min.js"></script>
+	<![endif]-->
+	
+  </head>
+  <body>
+  <div id="cover"></div>
+  <style>
+  #cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; background: #FFF; z-index:9999; 
+    font-size: 60px; text-align: center; padding-top: 200px; color: #fff;
+}
+  </style>
+   <header>
+		<div class="navbar"id="top" style="z-index: 500">
+			<div class="container">
+				<div class="nav-collapse collapse navbar-responsive-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#feature">Sleek UI</a></li>
+						<li><a href="#feature1">Database</a></li>
+						<li><a href="#feature2">Smart Study</a></li>
+                        						<li><a href="#charitymenu">Charity</a></li>
+
+						<li><a href="#contact">Download</a></li>
+
+						
+					</ul>
+				</div>
+				<div class="nav-right" style="font-weight:400"><a href="#contact" class="btnnext">Download Now!</a></div>
+			</div>
+		</div>
+	</header>
+    
+	<section id="home" class="bgslider-wrapper">
+		<div class="home-contain" style="text-align:left">
+			<div class="container" id="homecontainer">
+				<div class="row">
+
+				  <div class="col-lg-6 col-lg-offset-1">
+                                    	<div class="clear1"></div>
+
+                    <h2 style="color:#000"> CARDS FOR A CAUSE</h2>
+						 <p style="color: #000; font-weight: 400" id="introdesc">Cards for a Cause is a new Flashcard study application, introducing a way to bring flashcards to the modern age with Sleek UI, unlimited flashcards, and proven study algorithms. All profits will be put towards fighting illiteracy.</p>
+						<div class="btn-group">
+							 <a data-target="#myModal" data-toggle="modal" class="btn btn-default btn-dark btn-cta" id="btn-group1" style="opacity: .95">
+								<span class="cta-head">Watch</span><br/>Click to See Video</a>
+							 <a href="#contact" class="btn btn-default btn-red btn-cta" id="btn-group2" style="opacity: .95; background-color: #F79E21">
+								<span class="cta-head">Download</span><br/>Available now.</a>
+                                <a href="#about" class="btn btn-default btn-dark btn-cta" id="btn-group3" style="opacity: .95">
+								<span class="cta-head">Learn</span><br/>Click to learn more</a>
+   						<style>
+						.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}						</style>
+                        		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+      <div class="video-container">
+<iframe src="http://www.youtube.com/embed/ZWRfzlgxWcg?rel=0" frameborder="0" allowfullscreen></iframe>  </div>    </div>
+     
+    </div>
+  </div>
+</div>
+   
+						</div>
+			
+                  	<div class="clear1"></div>
+					</div>	
+                    <div class="col-lg-5">
+                    <video width="300" height="601"id="myVideo">
+  <source src="Untitled.mp4" type="video/mp4">
+    <source src="Untitled.webm" type="video/webm">
+</video>
+                    </div>
+
+
+                   <!--end sec1 content-->				
+				</div>	<!--end row-->
+			</div>	<!--end #homecontainer-->
+		</div> <!--end homecontain-->
+	</section>
+	
+    
+    
+    
+    <div class="clearfix"></div>
+	
+  <section id="about">
+			<div class="container">
+            
+            <style>.clear1 {height:100px}
+            #about {background:url(bg1.png) no-repeat right; background-size:800px 951px;
+}
+            </style>
+				<div class="row">
+              
+<style>
+p, h3, img {position: relative}
+</style>
+					<div class="col-lg-4 col-lg-offset-2">
+
+<h3 class="heading" style="color:#000; text-transform: none; font-size:40px; line-height: 40px" id="sec1h1">You have never studied this way before.</h3>
+						<p style="color:#666; font-size: 16px; line-height:30px; font-weight: 400; position: relative" id="sec1p1">
+						
+                        No longer will you have to carry around stacks of flashcards; now it can just be on any of your iOS or Android devices, ready to go anywhere.
+                        Featuring a sleek UI, Quizlet integration, proven memory algorithms, and user editable decks, Cards for a Cause is one of most advanced flashcard applications ever, made to ensure the optimal studying 
+                        environment for the average user. 
+                        <br/>
+						<a href="#feature" class="btnnext">Next Feature</a>
+						</p>
+					</div>	
+                 
+				
+					
+			  </div>	
+			</div>		
+	</section>
+
+
+
+
+  <section id="feature" >
+    
+                        
+
+			<div class="container" >
+				<div class="row">
+                	<div class="col-lg-4 col-lg-offset-1">
+                    <img src="HTCOne.png" style="border: 1px #000"class="img-responsive" id="sec2img"/>
+						</div>	
+					
+                        
+                  <div class="col-lg-5 col-lg-offset-1">
+                        <h3 class="heading" style="color:#000; text-transform: none; font-size:48px" id="sec2h1">Sleek UI</h3>
+                        <p style="color:#000" id="sec2p1"> The new version of iOS introduced a brand new User Interface (UI), designed to make the user experience a whole new flat and modern mobile environment. 
+                        While some apps are still left in the days of iOS 6, we have embraced the new UI and have tailored the app specifically to the design of the new system to ensure
+                        the best experience for the user.	Additionally, our Android version is breaking boundaries by introducing a modern and minimalist UI to the latest version of Android software.	<br/>				<a href="#feature1" class="btnnext">Next Feature</a>
+                        <div class="clear1"></div>                        <div class="clear1"></div>
+
+ <style>
+
+.btnnext {
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  color: #F79E21;
+  font-size: 14px;
+  background: #FFF;
+  padding: 5px 10px 5px 10px;
+  border: solid #F79E21 1px;
+  text-decoration: none;
+    -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+
+.btnnext:hover {
+  background: #F79E21;
+  text-decoration: none;
+  color:#FFF
+}
+ </style>
+								</p>
+                        </div>
+				</div>	
+                                         <div class="clear1"></div>
+                                                                 <div class="clear1"></div>
+                        <div class="clear1"></div>
+
+
+			</div>		
+	</section>
+  <section id="feature1">
+  <style>
+#feature1 {background-image: url(bg2-2.jpg); background-size: cover}
+</style>
+			<div class="container" id="feature1menu" >
+				<div class="row" id="sec3">
+                <div class="clear1"></div>
+				<div class="col-lg-4 col-lg-offset-1">
+                <div class="clear1"></div>
+                    <img src="quizlet.png" class="img-responsive" id="quizlet"/></div>
+		
+                        <div class="col-lg-6 col-lg-offest-1">
+                                                <h3 class="heading" style="color:#FFF; text-transform: none; font-size:48px" id="sec3h1">Database</h3>
+
+                        <p style="color: #FFF">When deciding where to get our flashcards from, we had to take into account the wide expanse of subjects users would be studying. 
+                        Additionally, we didn't want to put a burden on the user to create cards on a device, as this can be time-consuming in the life of the efficient student. So why not use
+                        Quizlet, one of the world's largest flashcard databases with over 20 million sets available. Users can access previously existing flashcard sets on the quizlet database or
+                        even search for their own cards, all just by doing a quick search on our app. <br/>
+
+                                      						<a href="#feature2" class="btnnexttr">Next Feature</a></p>
+ <div class="clear1"></div>
+
+                        </div>
+				</div>	
+			</div>		
+	</section>
+  <section id="feature2">
+			<div class="container" >
+				<div class="row">
+                <div class="clear1"></div>
+                <div class="col-lg-6 col-lg-offset-1">
+                <div class="clear1"></div>
+<h3 class="heading" style="color:#000; text-transform: none; font-size:52px">Smart Study</h3>
+<p>Using the latest advancements in spaced repetition algorithm learning, we ensure a productive study environment. Whether it is cramming a night before a test or studying for a final, the tools we have implemented
+help you revise material you are uncomfortable with quickly and easily. Just tap thumbs up if you get it and thumbs sideways or thumbs down if you don't understand the material. Our algorithms take this information into account and
+show cards you are uncomfortable with more frequently until you indicate you understand the card.
+                <br/>
+                                        						<a href="#charitymenu" class="btnnext">Next Feature</a>
+
+                </div>
+				<div class="col-lg-4">
+                    <img src="img/smartstudy.png" class="img-responsive" id="sec4img1"/></div>
+                    
+		
+	
+      <style>
+	  
+.btnnextwh {
+	
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  color: #FFF;
+  font-size: 14px;
+  background: #F79E21;
+  padding: 5px 10px 5px 10px;
+  border: solid #FFF 1px;
+  text-decoration: none;
+    -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+  
+}
+
+.btnnextwh:hover {
+  background: #FFF;
+  text-decoration: none;
+  color:#F79E21;
+  
+}
+.btnnexttr {
+	
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  color: #FFF;
+  font-size: 18px;
+  padding: 5px 10px 5px 10px;
+  border: solid #FFF 1px;
+  text-decoration: none;
+    -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+  
+}
+
+.btnnexttr:hover {
+  background: #F79E21;
+  text-decoration: none;
+  color: #FFF
+  
+}
+.btnnextblk {
+	
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  background: #000;
+  color: #FFF;
+  font-size: 18px;
+  padding: 5px 10px 5px 10px;
+  border: solid #FFF 1px;
+  text-decoration: none;
+    -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+  
+}
+
+.btnnextblk:hover {
+  background: #FFF;
+  text-decoration: none;
+  color: #000
+  
+}
+#sec5img2 {height: 40vh; max-height: 400px}
+#sec5img1 {height: 40vh;  max-height: 400px}
+#sec4img1 {height: 85vh; max-height: 600px}
+h1 {font-size: 10vh}
+ </style>
+			   
+        
+                        </div>
+				</div>	
+			</div>		
+	</section>
+
+  <section id="charity">
+			<div class="container" id="charitymenu">
+				<div class="row" >
+            
+                <div class="clear1"></div>
+                <div class="col-lg-4 col-lg-offset-1 text-center">
+                    <img src="img/sayl.png" class="img-responsive" id="sec5img1"/></div>
+                    <div class="col-lg-4 col-lg-offset-2 text-center"><img src="img/afa.png" class="img-responsive" id="sec5img2"/></div>
+		
+                        <div class="col-lg-12 text-center" id="contentsec5">
+
+                        <h3 class="heading" style="color:#FFF; text-transform: none; font-size:60px" >CHARITY</h3>
+                        <p style="color: #ECECEC">The main purpose of this app is to raise money for our non-profit organization called Apps for Aptitude. We are a 501c3 nonprofit based in San Antonio, Texas
+                        dedicated to fighting illiteracy, both verbal and technological. The funds generated from the sales of this app will go towards funding book drives to be held across the greater
+                        San Antonio school district and to San Antonio Youth Literacy, another nonprofit which encourages volunteers to help struggling elementary school children up to the second grade. To learn more about
+                        Apps for Aptitude, <a href="http://www.appsforaptitude.org/index.html" target="_blank">visit our website</a> or like and follow us on <a href="http://www.facebook.com/Appsforaptitude" target="_blank">Facebook</a> or <a href="http://www.twitter.com/Appsforaptitude" taget="_blank">Twitter</a>. </p>
+                                          <p><a href="#contact" target="_blank"class="btnnexttr">Download</a></p>
+
+
+                        </div>
+				</div>	
+			</div>		
+	</section>
+
+	<section id="contact">
+		<div class="container">
+			<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 text-center">
+					<h3 style="color: #FFF" style="text-align:center">Download</h3>
+					<p style="color: #FFF; text-align:center">
+						Be sure to like our facebook and follow us on twitter to stay updated. <p style="text-align:center"><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FAFACardsForACause&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe><a href="https://twitter.com/AppsforAptitude" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false">Follow @twitter</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+					</p>
+
+                    <a href="https://itunes.apple.com/us/app/cards-for-a-cause/id792476987?mt=8" target="_blank"><img src="ios.png" height="90px"></a>                 <a href="https://play.google.com/store/apps/details?id=com.afa.cardsforacause" target="_blank"><img src="play.png" height="90px"></a>
+
+                   
+					
+                                  <div class="col-lg-12 text-center"><div class="clear1"></div><p><a href="#home" class="btnnextblk">Go to top</a></p> <div class="clear1"></div><p><img src="http://www.appsforaptitude.org/rackspacedark.png" class="img-responsive"></p></div>
+                                                            
+                  
+			</div>
+		</div>
+	
+    	<script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
+  	<script src="js/jquery.lettering-0.6.1.min.js"></script>
+	<script src="js/jquery.superscrollorama.js"></script>
+  <script>
+	$(document).ready(function() {
+		var controller = $.superscrollorama({
+			playoutAnimations: true
+		});
+			
+		$("h2").lettering("lines").children('span').lettering();
+
+var tl = new TimelineLite({delay:2})
+TweenLite.set("body", {perspective:600, autoAlpha:1})
+tl.staggerFrom("h2>span:nth-child(1) span ", 1, {opacity:0, rotationX:-90, top:50, transformOrigin:"50% 50% -50", ease:Back.easeOut}, 0.1)
+
+				.append([
+
+								TweenMax.from( $('#introdesc'), 1, {css:{opacity:'0'}, ease:Expo.easeOut}),
+
+				TweenMax.from( $('#btn-group1'), 1, {css:{left:'-100px',opacity:'0'}, ease:Expo.easeOut}),
+								TweenMax.from( $('#btn-group2'), 1, {css:{right:'-100px',opacity:'0'}, ease:Expo.easeOut}),
+																TweenMax.from( $('#btn-group3'), 1, {css:{top:'-100px',opacity:'0'}, ease:Expo.easeOut}),
+
+								TweenMax.from( $('#top'), 1, {css:{opacity:0}})
+								]);
+											
+												controller.addTween('#sec1img', TweenMax.from( $('#sec1img'), .5, {css:{opacity: 0}}),1.5)
+											
+
+		
+											
+												controller.addTween('#sec2img', TweenMax.from( $('#sec2img'), .5, {css:{left:'-100px',opacity: 0}}))
+
+
+
+
+		controller.addTween('#quizlet', TweenLite.from($('#quizlet'), .5, {rotation:".5rad", opacity: 0}))
+
+								
+												controller.addTween('#sec4img1', TweenMax.from( $('#sec4img1'),1, {css:{top:'-100px', opacity: 0}}))
+												controller.addTween('#sec5img1', TweenMax.from( $('#sec5img1'),1, {css:{top:'40px',opacity: 0}}))
+												controller.addTween('#sec5img2', TweenMax.from( $('#sec5img2'),1, {css:{top:'40px',opacity: 0}}))
+												
+									
+
+
+																
+
+	});  
+	</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46246971-1', 'appsforaptitude.org');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>
